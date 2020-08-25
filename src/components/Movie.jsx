@@ -1,9 +1,11 @@
 import React from "react";
 
-const Movie = () => {
+// props destrucuring
+const Movie = ({ name, price }) => {
   return (
     <div>
-      <h3>Movie</h3>
+      <h3>{name}</h3>
+      <p>{price}</p>
     </div>
   );
 };
