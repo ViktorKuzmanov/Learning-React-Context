@@ -1,12 +1,13 @@
 import React from "react";
 import MoviesList from "./components/MoviesList";
+import { MovieProvider } from "./context/MovieContext";
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
+    <MovieProvider>
       This is app component
       <MoviesList />
-    </div>
+    </MovieProvider>
   );
 }
 
