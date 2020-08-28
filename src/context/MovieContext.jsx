@@ -9,5 +9,10 @@ export const MovieProvider = (props) => {
     { name: "Movie3", price: "$33", id: 333 },
   ]);
 
-  return <MovieContext.Provider>{props.children}</MovieContext.Provider>;
+  return (
+    // Pass entire useState hook in value
+    <MovieContext.Provider value={[movies, setMovies]}>
+      {props.children}
+    </MovieContext.Provider>
+  );
 };
